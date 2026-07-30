@@ -7,5 +7,5 @@ package Fire_Control is
       armor_rating : Float;
    end record;
 
-   procedure Engage_Target (Shell : Projectile; Enemy: Target; Auth_Code : String);
+   procedure Engage_Target (Shell : Projectile; Enemy : Target; Auth_Code : String);
 end Fire_Control;
