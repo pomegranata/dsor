@@ -3,7 +3,7 @@ with Ada.Float_Text_IO; use Ada.Float_Text_IO;
 package body Fire_Control is
    procedure Engage_Target (Shell : Projectile;
                               Enemy : Target; Auth_Code : String) is
-   kinetic_energy : Float := 0.0;
+   kinetic_energy : Float;
    begin
       Put_Line (" ");
       Put_Line ("========================================");
@@ -36,11 +36,11 @@ package body Fire_Control is
             Put_Line ("----------------------------------------");
             Put_Line ("[ COMBAT LOG ]");
 
-            Put ("MISSILE KINETIC ENERGY: ");
+            Put ("MISSILE KINETIC ENERGY:  ");
             Put (Item => kinetic_energy, Fore => 4, Aft => 2, Exp => 0);
             Put_Line (" Joules.");
 
-            Put ("ENEMY ARMOR RATING: ");
+            Put ("ENEMY ARMOR RATING:      ");
             Put (Item => Enemy.armor_rating, Fore => 4, Aft => 2, Exp => 0);
             Put_Line (" Armor");
 
